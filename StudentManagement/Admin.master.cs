@@ -11,4 +11,10 @@ public partial class Admin : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("LoginPanel.aspx");
+    }
 }

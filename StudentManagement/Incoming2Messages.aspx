@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="IncomingMessages.aspx.cs" Inherits="IncomingMessages" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Stundent.master" AutoEventWireup="true" CodeFile="Incoming2Messages.aspx.cs" Inherits="Incoming2Messages" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 
-    <table class="table table-hover">
+      <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -20,7 +20,7 @@
           <ItemTemplate>
               <tr>
                   <td><%#Eval("ID") %></td>
-                  <td><%#Eval("Sender") %></td>
+                  <td><%#Eval("Gönderen") %></td>
                   <td><%#Eval("Titlee") %></td>
                   <td><%#Eval("Messagee") %></td>
                   <td><%#Eval("Timee") %></td>

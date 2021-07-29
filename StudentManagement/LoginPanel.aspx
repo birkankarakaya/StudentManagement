@@ -27,6 +27,9 @@
             </div>
             <br />
             <asp:Button ID="Button1" runat="server" Text="Giriş Yap" Width="700px" CssClass=" btn btn-warning" OnClick="Button1_Click" />
+            <br />
+            <br />
+            <asp:Button ID="Button2" runat="server" Text="Öğretmen Girişi" CssClass=" btn btn-primary"  Width="700px" OnClick="Button2_Click"/>
         </div>
         
     </form>

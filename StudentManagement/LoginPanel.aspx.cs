@@ -26,7 +26,23 @@ public partial class LoginPanel : System.Web.UI.Page
 
         if (dr.Read())
         {
-            Response.Redirect("Default2.aspx?Number="+KullAd.Text);
+            Session.Add("Number", KullAd.Text);
+            Response.Redirect("Default2.aspx");
+        }
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        baglanti.Open();
+        SqlCommand komut = new SqlCommand("SELECT * FROM Tbl_Teacher Where CitizenshipNumber=@p1 AND Code=@p2", baglanti);
+        komut.Parameters.AddWithValue("@p1", KullAd.Text);
+        komut.Parameters.AddWithValue("@p2", Sifre.Text);
+
+        SqlDataReader dr = komut.ExecuteReader();
+
+        if (dr.Read())
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

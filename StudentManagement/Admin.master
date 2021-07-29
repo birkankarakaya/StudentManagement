@@ -23,8 +23,9 @@
 </head>
 
 <body>
+    <form id="form1" runat="server">
 
-    <div class="wrapper">
+        <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -32,7 +33,7 @@
                 <strong>BS</strong>
             </div>
 
-            <ul class="list-unstyled components">
+            <ul class="list-unstyled components" runat="server">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="glyphicon glyphicon-user"></i>
@@ -114,10 +115,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-off"></i>
-                        Çıkış Yap
-                    </a>
+                    <asp:Button ID="Button1" runat="server" Text="Çıkış Yap" CssClass="btn btn-danger btn-group-justified" OnClick="Button1_Click" />
                 </li>
             </ul>
 
@@ -130,6 +128,9 @@
 
         </div>
     </div>
+
+    </form>
+    
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

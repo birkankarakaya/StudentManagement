@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <form id="form1" runat="server">
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -31,11 +32,11 @@
             <ul class="list-unstyled components">
                 
                 <li>
-                    <a href="ResultList.aspx">
+                    <a href="Result2List.aspx">
                         <i class="glyphicon glyphicon-briefcase"></i>
                         Notlar
                     </a>
-                    <a href="LessonList.aspx">
+                    <a href="Default2.aspx?Number=22222">
                         <i class="glyphicon glyphicon-user"></i>
                         Profil
                     </a>
@@ -46,13 +47,13 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu3">
                         <li>
-                            <a href="SendMessage.aspx"><i class="glyphicon glyphicon-edit"></i>Yeni Mesaj Oluştur</a>
+                            <a href="StudentSentMessage.aspx"><i class="glyphicon glyphicon-edit"></i>Yeni Mesaj Oluştur</a>
                         </li>
                         <li>
-                            <a href="IncomingMessages.aspx"><i class="glyphicon glyphicon-import"></i>Gelen Mesajlar</a>
+                            <a href="Incoming2Messages.aspx"><i class="glyphicon glyphicon-import"></i>Gelen Mesajlar</a>
                         </li>
                         <li>
-                            <a href="OutgoingMessages.aspx"><i class="glyphicon glyphicon-export"></i>Giden Mesajlar</a>
+                            <a href="SentMessages.aspx"><i class="glyphicon glyphicon-export"></i>Giden Mesajlar</a>
                         </li>
                     </ul>
                 </li>
@@ -69,10 +70,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-off"></i>
-                        Çıkış Yap
-                    </a>
+                    
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" class="btn btn-danger btn-group-justified" Text="Çıkış Yap"/>
                 </li>
             </ul>
         </nav>
@@ -97,6 +96,7 @@
             });
         });
     </script>
+    </form>
 </body>
 
 </html>
